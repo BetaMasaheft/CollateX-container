@@ -9,7 +9,7 @@ ARG COLLATEX_VERSION=1.7.1
 
 COPY ./lib/collatex-tools-$COLLATEX_VERSION.jar collatex-tools.jar
 
-EXPOSE 17100
+EXPOSE 7369
 
 ENTRYPOINT ["java", "-jar", "/collatex-tools.jar", "--http"]
 
