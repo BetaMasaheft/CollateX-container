@@ -9,9 +9,9 @@ ARG COLLATEX_VERSION=1.7.1
 
 COPY ./lib/collatex-tools-$COLLATEX_VERSION.jar collatex-tools.jar
 
-EXPOSE 7369
+EXPOSE 17105
 
-ENTRYPOINT ["java", "-jar", "/collatex-tools.jar", "--http"]
+ENTRYPOINT ["java", "-jar", "/collatex-tools.jar", "--http", "--port", "17105"]
 
 # sudo docker build -t collatex-service .
 # sudo docker run -a stderr collatex-service:latest
