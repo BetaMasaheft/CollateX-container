@@ -1,0 +1,21 @@
+.github/dependabot.yml
+  s_16a6cdccdd371f::t_8b60bf16d01d47 1-19
+.github/workflows/build.yml
+  s_16a6cdccdd371f::t_d3974c2baf0748 17,25,60,63,71,79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "22d89d13b9faf503f2c0a1b118a58f18542a022c",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
