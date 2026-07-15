@@ -1,0 +1,1 @@
+{"witnesses":[{"id":"W1","content":"Hallo"},{"id":"W2","content":"Hello"}],"algorithm":"dekker","tokenComparator":{"type":"equality"},"joined":true,"transpositions":true}

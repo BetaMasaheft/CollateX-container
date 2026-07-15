@@ -7,7 +7,46 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
+  # Golden-output contract tests (test/collate_spec.bats): build the image,
+  # run it, and compare /collate responses against the checked-in fixtures.
+  # The deploy job below only runs when these pass.
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Install bats
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install bats
+
+      - name: Build Docker image
+        uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
+        with:
+          context: .
+          load: true
+          tags: collatex-service:test
+
+      - name: Start the service
+        run: docker run -d --rm --name collatex -p 17105:17105 collatex-service:test
+
+      - name: Wait for the service
+        timeout-minutes: 2
+        run: |
+          until curl -sfo /dev/null http://localhost:17105/; do
+            sleep 2
+          done
+
+      - name: Run golden-output tests
+        run: bats --tap test/*.bats
+
+      - name: Show service logs on failure
+        if: failure()
+        run: docker logs collatex
+
   build-and-push-image:
+    needs: test
     runs-on: ubuntu-latest
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
