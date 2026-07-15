@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # Keep GitHub Actions in sync
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    # one grouped PR instead of one per action
+    groups:
+      github-actions:
+        patterns:
+          - "*"
