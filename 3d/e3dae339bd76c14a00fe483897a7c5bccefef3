@@ -1,0 +1,33 @@
+test/collate_spec.bats
+  s_16a6cdccdd371f::t_b7ebe7cf9e15d8 1-40
+README.md
+  s_16a6cdccdd371f::t_dcb039faea010d 3-11,14-22,24-26,28
+.github/workflows/build.yml
+  s_16a6cdccdd371f::t_8a38e2c9899769 10-47,49
+test/fixtures/ethiopic-expected.json
+  s_16a6cdccdd371f::t_c3f8813314d8df 1-41
+test/fixtures/ethiopic-request.json
+  s_16a6cdccdd371f::t_f864a5fd798535 1
+test/fixtures/simple-expected.json
+  s_16a6cdccdd371f::t_f3f40fdd3e3a34 1-16
+test/fixtures/simple-expected.tei.xml
+  s_16a6cdccdd371f::t_4a21bc710d9093 1
+test/fixtures/simple-request.json
+  s_16a6cdccdd371f::t_d5ece9511cdb85 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "3de3dae339bd76c14a00fe483897a7c5bccefef3",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
