@@ -1,0 +1,21 @@
+.github/workflows/build.yml
+  s_16a6cdccdd371f::t_35c8136b360c65 74-79,88
+Dockerfile
+  s_16a6cdccdd371f::t_f5ece1f2392eca 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "d346c55e9302fed3e7913bc20ae50e7f14c105ac",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
