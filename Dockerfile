@@ -1,4 +1,6 @@
-FROM adoptopenjdk/openjdk8:alpine
+# eclipse-temurin is the maintained successor of the retired adoptopenjdk
+# images, and unlike those it ships linux/arm64 alongside linux/amd64
+FROM eclipse-temurin:8-jre
 
 LABEL org.opencontainers.image.source=https://github.com/BetaMasaheft/collatex-service
 LABEL org.opencontainers.image.description="Docker container for using CollateX as a web service"
