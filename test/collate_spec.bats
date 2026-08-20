@@ -64,3 +64,20 @@ FIXTURES="$BATS_TEST_DIRNAME/fixtures"
     --data @"$FIXTURES/simple-request.json" "$BASE_URL/collate")
   diff <(echo "$result") "$FIXTURES/simple-expected.tei.xml"
 }
+
+# Raw servlet-layer goldens for production witness ids (ESamm007 / ESmr001).
+# Captured from collatex-tools 1.7.1 in this image (same jar as the legacy
+# host servlet). Stack cutover parity for /api/collatex lives in betmas-e2e
+# (legacy-parity fixtures); this suite only asserts the CollateX POST surface.
+# See BetaMasaheft/collatex-service#5.
+@test "POST /collate servlet-parity JSON (ESamm007/ESmr001)" {
+  result=$(curl -sf -H 'Content-Type: application/json' -H 'Accept: application/json' \
+    --data @"$FIXTURES/servlet-parity-request.json" "$BASE_URL/collate" | jq -S .)
+  diff <(echo "$result") "$FIXTURES/servlet-parity-expected.json"
+}
+
+@test "POST /collate servlet-parity TEI (ESamm007/ESmr001)" {
+  result=$(curl -sf -H 'Content-Type: application/json' -H 'Accept: application/tei+xml' \
+    --data @"$FIXTURES/servlet-parity-request.json" "$BASE_URL/collate")
+  diff <(echo "$result") "$FIXTURES/servlet-parity-expected.tei.xml"
+}

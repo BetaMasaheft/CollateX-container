@@ -28,3 +28,5 @@ bats --tap test/collate_spec.bats
 ```
 
 CI runs them on every push before the image is built and pushed to ghcr. The expected files under `test/fixtures/` capture the exact service output (JSON normalised with `jq -S .`); regenerate them the same way after a deliberate CollateX version bump.
+
+`servlet-parity-*` fixtures freeze a raw `POST /collate` with production witness ids (`ESamm007` / `ESmr001`) against collatex-tools 1.7.1 (same jar as the legacy host servlet). The BetMasWeb `/api/collatex` wrapper is gated separately in [betmas-e2e](https://github.com/BetaMasaheft/betmas-e2e) via `cypress/fixtures/legacy-parity/` — see [#5](https://github.com/BetaMasaheft/collatex-service/issues/5).
