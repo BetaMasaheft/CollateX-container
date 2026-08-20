@@ -21,6 +21,11 @@ FIXTURES="$BATS_TEST_DIRNAME/fixtures"
   [ "$code" -eq 200 ]
 }
 
+@test "container reports healthy to docker" {
+  result=$(docker ps | grep -c 'healthy')
+  [ "$result" -eq 1 ]
+}
+
 @test "POST /collate aligns two witnesses (JSON)" {
   result=$(curl -sf -H 'Content-Type: application/json' -H 'Accept: application/json' \
     --data @"$FIXTURES/simple-request.json" "$BASE_URL/collate" | jq -S .)

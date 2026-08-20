@@ -29,14 +29,21 @@ jobs:
           tags: collatex-service:test
 
       - name: Start the service
-        run: docker run -d --rm --name collatex -p 17105:17105 collatex-service:test
+        run: |
+          docker run -d --rm --name collatex -p 17105:17105 \
+            --health-interval=2s \
+            --health-timeout=2s \
+            --health-start-period=15s \
+            --health-retries=5 \
+            collatex-service:test
 
       - name: Wait for the service
         timeout-minutes: 2
         run: |
           until curl -sfo /dev/null http://localhost:17105/; do
-            sleep 2
+            sleep 3
           done
+          sleep 2
 
       - name: Run golden-output tests
         run: bats --tap test/*.bats
