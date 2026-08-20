@@ -1,0 +1,30 @@
+.gitignore
+  h_ff0005bef58c9d 3
+.dockerignore
+  h_ff0005bef58c9d 4
+test/collate_spec.bats
+  h_ff0005bef58c9d 24-28
+Dockerfile
+  s_6f344296aa289a::t_888fc7ba49eb03 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "f418e9ce19435450fced401f1ad8bc28caafd31c",
+  "prompts": {},
+  "humans": {
+    "h_ff0005bef58c9d": {
+      "author": "duncdrum <d.paterson@me.com>"
+    }
+  },
+  "sessions": {
+    "s_6f344296aa289a": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ec01ec47-5ef3-4804-9ec3-c1bda4281db1",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
