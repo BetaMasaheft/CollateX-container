@@ -1,0 +1,27 @@
+test/collate_spec.bats
+  s_6f344296aa289a::t_386b95413e400f 67-83
+README.md
+  s_6f344296aa289a::t_f3b9ac86dd44d4 31-32
+test/fixtures/servlet-parity-expected.json
+  s_6f344296aa289a::t_c83bb155688923 1-21
+test/fixtures/servlet-parity-expected.tei.xml
+  s_6f344296aa289a::t_6ea9df4954ec3c 1
+test/fixtures/servlet-parity-request.json
+  s_6f344296aa289a::t_b173be9225925b 1-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "af5fceb120f6dbf151e57438245e49f22784cb8a",
+  "prompts": {},
+  "sessions": {
+    "s_6f344296aa289a": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ec01ec47-5ef3-4804-9ec3-c1bda4281db1",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
