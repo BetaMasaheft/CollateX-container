@@ -1,0 +1,33 @@
+.dockerignore
+  h_ff0005bef58c9d 4
+test/collate_spec.bats
+  h_ff0005bef58c9d 24-28
+.github/workflows/build.yml
+  h_ff0005bef58c9d 44,46
+  s_6f344296aa289a::t_0c210769bdef4f 32-38
+Dockerfile
+  s_6f344296aa289a::t_888fc7ba49eb03 19
+.gitignore
+  h_ff0005bef58c9d 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "5e6dd21d7d13c2d7b700ada42c26ec230342b3f1",
+  "prompts": {},
+  "humans": {
+    "h_ff0005bef58c9d": {
+      "author": "duncdrum <d.paterson@me.com>"
+    }
+  },
+  "sessions": {
+    "s_6f344296aa289a": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ec01ec47-5ef3-4804-9ec3-c1bda4281db1",
+        "model": "default"
+      },
+      "human_author": null
+    }
+  }
+}
