@@ -2,6 +2,8 @@
 
 Wraps [collatex-tools](https://collatex.net/) 1.7.1 as an HTTP service on port **17105**.
 
+Published responses are framed by an in-image nginx reverse proxy so clients receive `Content-Length` instead of chunked encoding. That avoids hangs in Apache HttpClient-based stacks (for example eXist-db EXPath `hc:send-request`) when the client sends `Expect: 100-continue`. See [#7](https://github.com/BetaMasaheft/collatex-service/issues/7).
+
 ## Run
 
 ```sh
