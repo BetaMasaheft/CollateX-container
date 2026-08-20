@@ -1,0 +1,18 @@
+{
+  "witnesses": [
+    {
+      "id": "ESamm007",
+      "content": "ንፈስ።"
+    },
+    {
+      "id": "ESmr001",
+      "content": "ሰላም፡ ለኪ፡ ኆኅተ፡ ምሥራቅ፡ በወልዳ፡ ኖሬ፡"
+    }
+  ],
+  "algorithm": "dekker",
+  "tokenComparator": {
+    "type": "equality"
+  },
+  "joined": true,
+  "transpositions": true
+}
