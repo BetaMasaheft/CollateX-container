@@ -1,0 +1,19 @@
+Dockerfile
+  s_6f344296aa289a::t_888fc7ba49eb03 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "495369f646740988da59182dbf24a02d0eca7476",
+  "prompts": {},
+  "sessions": {
+    "s_6f344296aa289a": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ec01ec47-5ef3-4804-9ec3-c1bda4281db1",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
