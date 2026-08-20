@@ -1,0 +1,38 @@
+test/collate_spec.bats
+  s_6f344296aa289a::t_58e02b6bf88eed 36,43-47,51-55
+  s_6f344296aa289a::t_63ffdd4c8cd491 25-27
+  s_6f344296aa289a::t_6d659180222cfd 37-42,48-50
+nginx/collatex-framer.conf
+  s_6f344296aa289a::t_ef029e9c5ec95b 1-39
+.codacy/.gitignore
+  h_ff0005bef58c9d 1
+scripts/entrypoint.sh
+  s_6f344296aa289a::t_28777bb3b312eb 11-14
+  s_6f344296aa289a::t_e73ec0126f75d6 19-20,23
+  s_6f344296aa289a::t_1bf6a228f4d6b0 1-10,15-18,21-22,24-41
+Dockerfile
+  s_6f344296aa289a::t_577d28f30eec65 12-22,26-27,31,33-34
+README.md
+  s_6f344296aa289a::t_187eda8c9655d4 5-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "780839570af4ef50b3c5097bbe2bb2a731b54c78",
+  "prompts": {},
+  "humans": {
+    "h_ff0005bef58c9d": {
+      "author": "duncdrum <d.paterson@me.com>"
+    }
+  },
+  "sessions": {
+    "s_6f344296aa289a": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ec01ec47-5ef3-4804-9ec3-c1bda4281db1",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
